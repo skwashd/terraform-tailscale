@@ -7,14 +7,31 @@ locals {
   tailnet_domain = "tail8bf2d.ts.net"
 
   # Trusted personal devices: full access to all tailnet devices and ports.
-  trusted_devices = toset(["skwashd_ipad_a4", "skwashd_iphone17pm", "skwashd_mbp_m4m"])
+  trusted_devices = toset(
+    [
+      "skwashd_ipad_a4",
+      "skwashd_iphone17pm",
+      "skwashd_mbp_m4m",
+    ]
+  )
 
   # Infrastructure/node devices: exit-node internet egress only.
-  node_devices = toset(["homeassistant", "homeassistant_home", "cc_node1", "gl_axt1800", "nas1", "skwashd_mbp14m2"])
+  node_devices = toset(
+    [
+      "cc_admin",
+      "cc_node1",
+      "gl_axt1800",
+      "homeassistant_home",
+      "homeassistant",
+      "nas1",
+      "skwashd_mbp14m2",
+    ]
+  )
 
   devices = {
     homeassistant      = "homeassistant"
     homeassistant_home = "homeassistant-home"
+    cc_admin           = "cc-admin"
     cc_node1           = "cc-node1"
     gl_axt1800         = "gl-axt1800"
     nas1               = "nas1"
