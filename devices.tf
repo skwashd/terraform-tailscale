@@ -24,7 +24,6 @@ locals {
       "homeassistant_home",
       "homeassistant",
       "nas1",
-      "skwashd_mbp14m2",
     ]
   )
 
@@ -38,7 +37,6 @@ locals {
     skwashd_ipad_a4    = "skwashd-ipad-a4"
     skwashd_iphone17pm = "skwashd-iphone17pm"
     skwashd_mbp_m4m    = "skwashd-mbp-m4m"
-    skwashd_mbp14m2    = "skwashd-mbp14m2"
   }
 }
 
