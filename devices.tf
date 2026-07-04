@@ -64,6 +64,14 @@ resource "tailscale_device_authorization" "this" {
 # Routes must be both advertised by the device AND approved here.
 # Advertised routes are managed on the device itself, not through Terraform.
 
+# gl.inet Slate AX router
+resource "tailscale_device_subnet_routes" "gl_axt1800" {
+  device_id = data.tailscale_device.this["gl_axt1800"].node_id
+  routes = [
+    "192.168.8.0/24",
+  ]
+}
+
 # homeassistant - exit node (approved)
 # NOTE: This device also advertises 172.16.66.0/23 and fdb5:1c81:e08:4c37::/64
 # but those routes are currently UNAPPROVED. Uncomment below to approve them.
